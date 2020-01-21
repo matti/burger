@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  burger:
+    build: .
+    image: mattipaksula/burger:0.0.1
+    volumes:
+      - ./app:/app
+    ports:
+      - 8080:8080
+    environment:
+      - DEBUG=yes
+      - SAUCE=${SAUCE:-microsoft.com}
