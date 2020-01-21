@@ -23,7 +23,7 @@ class App < Roda
   route do |r|
     r.purge "mirror" do
       resolv = Resolv::DNS.new
-      resources = resolv.getresources(ENV.fetch("SAUCE"), Resolv::DNS::Resource::IN::A)
+      resources = resolv.getresources(ENV.fetch("SAUCE", "web-all"), Resolv::DNS::Resource::IN::A)
 
       addresses = []
       for record in resources do

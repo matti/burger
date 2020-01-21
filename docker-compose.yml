@@ -3,7 +3,7 @@ version: "3.6"
 services:
   burger:
     build: .
-    image: mattipaksula/burger:0.0.1
+    image: mattipaksula/burger:0.1.0
     volumes:
       - ./app:/app
     ports:
